@@ -1,0 +1,127 @@
+.tarefa-lista {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  font-family: "Segoe UI", -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif;
+}
+
+header h1 {
+  font-size: 1.75rem;
+  margin: 0;
+  color: #1f2937;
+}
+
+header p {
+  margin: 0.25rem 0 1.5rem;
+  color: #6b7280;
+}
+
+.alerta {
+  padding: 0.75rem 1rem;
+  margin-bottom: 1rem;
+  border-radius: 6px;
+  background-color: #fef3c7;
+  color: #92400e;
+  border: 1px solid #fcd34d;
+}
+
+.carregando {
+  color: #6b7280;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+th,
+td {
+  padding: 0.75rem 1rem;
+  text-align: left;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+th {
+  background-color: #f9fafb;
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  color: #4b5563;
+}
+
+tbody tr:hover {
+  background-color: #f9fafb;
+}
+
+tbody tr td[colspan] {
+  text-align: center;
+  color: #6b7280;
+}
+
+.badge {
+  display: inline-block;
+  padding: 0.25rem 0.6rem;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  background-color: #e5e7eb;
+  color: #374151;
+}
+
+.badge.concluida {
+  background-color: #d1fae5;
+  color: #065f46;
+}
+
+.badge.prioridade-alta {
+  background-color: #fee2e2;
+  color: #991b1b;
+}
+
+.badge.prioridade-media {
+  background-color: #fef3c7;
+  color: #92400e;
+}
+
+.badge.prioridade-baixa {
+  background-color: #dbeafe;
+  color: #1e40af;
+}
+
+.acoes {
+  white-space: nowrap;
+}
+
+button {
+  padding: 0.4rem 0.8rem;
+  margin-right: 0.4rem;
+  border: 1px solid #2563eb;
+  border-radius: 6px;
+  background-color: #2563eb;
+  color: #ffffff;
+  font-size: 0.875rem;
+  cursor: pointer;
+}
+
+button:hover:not(:disabled) {
+  background-color: #1d4ed8;
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+button.excluir {
+  background-color: #ffffff;
+  color: #dc2626;
+  border-color: #dc2626;
+}
+
+button.excluir:hover {
+  background-color: #fee2e2;
+}

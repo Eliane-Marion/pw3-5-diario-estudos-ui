@@ -38,7 +38,7 @@ export class TarefaService {
     }
 
     concluirTarefa(id: number): Observable<Tarefa> {
-        return this.http.put<Tarefa>(`${this.baseUrl}/${id}/concluir`, {})
+        return this.http.patch<Tarefa>(`${this.baseUrl}/${id}/concluir`, {})
             .pipe(catchError(this.tratarErro));
     }
 
