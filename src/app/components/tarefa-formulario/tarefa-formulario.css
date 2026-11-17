@@ -1,0 +1,105 @@
+.tarefa-formulario {
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  font-family: "Segoe UI", -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif;
+}
+
+header h1 {
+  font-size: 1.75rem;
+  margin: 0;
+  color: #1f2937;
+}
+
+header p {
+  margin: 0.25rem 0 1.5rem;
+  color: #6b7280;
+}
+
+.alerta {
+  padding: 0.75rem 1rem;
+  margin-bottom: 1rem;
+  border-radius: 6px;
+  background-color: #fef3c7;
+  color: #92400e;
+  border: 1px solid #fcd34d;
+}
+
+form {
+  background-color: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 1.5rem;
+}
+
+.campo {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+
+label {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #374151;
+  margin-bottom: 0.35rem;
+}
+
+input {
+  padding: 0.5rem 0.75rem;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  font-family: inherit;
+}
+
+input:focus {
+  outline: none;
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+}
+
+input.ng-invalid.ng-touched {
+  border-color: #dc2626;
+}
+
+.erro {
+  color: #dc2626;
+  font-size: 0.8rem;
+  margin-top: 0.3rem;
+}
+
+.acoes {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 1.25rem;
+}
+
+button {
+  padding: 0.5rem 1rem;
+  border: 1px solid #2563eb;
+  border-radius: 6px;
+  background-color: #2563eb;
+  color: #ffffff;
+  font-size: 0.875rem;
+  cursor: pointer;
+}
+
+button:hover:not(:disabled) {
+  background-color: #1d4ed8;
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+button.cancelar {
+  background-color: #ffffff;
+  color: #374151;
+  border-color: #d1d5db;
+}
+
+button.cancelar:hover {
+  background-color: #f9fafb;
+}

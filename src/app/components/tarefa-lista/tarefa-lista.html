@@ -1,7 +1,10 @@
 <main class="tarefa-lista">
-  <header>
-    <h1>Diário de Bordo de Estudos</h1>
-    <p>Tarefas cadastradas para a carga horária complementar</p>
+  <header class="cabecalho">
+    <div>
+      <h1>Diário de Bordo de Estudos</h1>
+      <p>Tarefas cadastradas para a carga horária complementar</p>
+    </div>
+    <a routerLink="/nova" class="botao">Nova Tarefa</a>
   </header>
 
   @if (mensagem) {
@@ -36,6 +39,7 @@
             </td>
             <td class="acoes">
               <button type="button" (click)="concluir(tarefa)" [disabled]="tarefa.status === 'CONCLUIDA'">Concluir</button>
+              <a class="botao botao-editar" [routerLink]="['/editar', tarefa.id]">Editar</a>
               <button type="button" class="excluir" (click)="excluir(tarefa)">Excluir</button>
             </td>
           </tr>

@@ -1,9 +1,11 @@
 import { Component, OnInit } from '@angular/core';
+import { RouterLink } from '@angular/router';
 import { TarefaService } from '../../services/tarefa.service';
 import { Tarefa } from '../../models/tarefa.model';
 
 @Component({
   selector: 'app-tarefa-lista',
+  imports: [RouterLink],
   templateUrl: './tarefa-lista.html',
   styleUrl: './tarefa-lista.css'
 })
