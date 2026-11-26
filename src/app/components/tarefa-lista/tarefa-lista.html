@@ -1,0 +1,54 @@
+<main class="tarefa-lista">
+  <header class="cabecalho">
+    <div>
+      <h1>Diário de Bordo de Estudos</h1>
+      <p>Tarefas cadastradas para a carga horária complementar</p>
+    </div>
+    <a routerLink="/nova" class="botao">Nova Tarefa</a>
+  </header>
+
+  @if (mensagem) {
+    <div class="alerta">{{ mensagem }}</div>
+  }
+
+  @if (carregando) {
+    <p class="carregando">Carregando tarefas...</p>
+  } @else {
+    <table>
+      <thead>
+        <tr>
+          <th>Título</th>
+          <th>Matéria</th>
+          <th>Data de Entrega</th>
+          <th>Status</th>
+          <th>Prioridade</th>
+          <th>Ações</th>
+        </tr>
+      </thead>
+      <tbody>
+        @for (tarefa of tarefas; track tarefa.id) {
+          <tr>
+            <td>{{ tarefa.titulo }}</td>
+            <td>{{ tarefa.materia }}</td>
+            <td>{{ tarefa.dataEntrega }}</td>
+            <td>
+              <span class="badge" [class.concluida]="tarefa.status === 'CONCLUIDA'">{{ tarefa.status }}</span>
+            </td>
+            <td>
+              <span class="badge prioridade-{{ tarefa.prioridade?.toLowerCase() }}">{{ tarefa.prioridade }}</span>
+            </td>
+            <td class="acoes">
+              <button type="button" (click)="concluir(tarefa)" [disabled]="tarefa.status === 'CONCLUIDA'">Concluir</button>
+              <a class="botao botao-editar" [routerLink]="['/editar', tarefa.id]">Editar</a>
+              <button type="button" class="excluir" (click)="excluir(tarefa)">Excluir</button>
+            </td>
+          </tr>
+        } @empty {
+          <tr>
+            <td colspan="6">Nenhuma tarefa cadastrada.</td>
+          </tr>
+        }
+      </tbody>
+    </table>
+  }
+</main>

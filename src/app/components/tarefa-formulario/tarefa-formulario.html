@@ -1,0 +1,41 @@
+<main class="tarefa-formulario">
+  <header>
+    <h1>{{ editando ? 'Editar Tarefa' : 'Nova Tarefa' }}</h1>
+    <p>Preencha os dados da tarefa de estudo</p>
+  </header>
+
+  @if (mensagem) {
+    <div class="alerta">{{ mensagem }}</div>
+  }
+
+  <form [formGroup]="formulario" (ngSubmit)="salvar()">
+    <div class="campo">
+      <label for="titulo">Título</label>
+      <input id="titulo" type="text" formControlName="titulo" placeholder="Ex.: Revisar POO" />
+      @if (titulo?.invalid && titulo?.touched) {
+        <span class="erro">O título é obrigatório.</span>
+      }
+    </div>
+
+    <div class="campo">
+      <label for="materia">Matéria</label>
+      <input id="materia" type="text" formControlName="materia" placeholder="Ex.: Banco de Dados" />
+      @if (materia?.invalid && materia?.touched) {
+        <span class="erro">A matéria é obrigatória.</span>
+      }
+    </div>
+
+    <div class="campo">
+      <label for="dataEntrega">Data de Entrega</label>
+      <input id="dataEntrega" type="date" formControlName="dataEntrega" />
+      @if (dataEntrega?.invalid && dataEntrega?.touched) {
+        <span class="erro">A data de entrega é obrigatória.</span>
+      }
+    </div>
+
+    <div class="acoes">
+      <button type="submit" [disabled]="salvando">{{ editando ? 'Salvar Alterações' : 'Cadastrar' }}</button>
+      <button type="button" class="cancelar" (click)="cancelar()">Cancelar</button>
+    </div>
+  </form>
+</main>
